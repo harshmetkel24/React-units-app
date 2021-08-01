@@ -23,7 +23,7 @@ const ConversionCard = () => {
             setrUnitValue(Number(lUnitValue) - 273);
         }
         console.log(rUnitValue);
-    }, [id, lUnitValue]);
+    }, [id, lUnitValue, rUnitValue, lToR]);
     useEffect(() => {
         if (id === 1 && rToL) {
             setlUnitValue(rUnitValue / 100);
@@ -35,7 +35,7 @@ const ConversionCard = () => {
             setlUnitValue(Number(rUnitValue) + 273);
         }
         console.log(lUnitValue);
-    }, [id, rUnitValue]);
+    }, [id, rUnitValue, lUnitValue, rToL]);
     useEffect(() => {
         // here we need to perform this update on effect not on cleanup
         const { lunit, runit, id, formula } = conversionApi.find((ele) => {
