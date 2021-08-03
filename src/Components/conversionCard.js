@@ -53,7 +53,7 @@ const ConversionCard = () => {
                     name=""
                     className="quantity"
                     id=""
-                    onClick={(e) => {
+                    onChange={(e) => {
                         setQuantity(e.target.value);
                     }}
                 >
